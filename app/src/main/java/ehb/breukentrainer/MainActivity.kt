@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             val scores: List<Score> = scoreDao.getAll()
             val wim = "test"
 
-            Toast.makeText(getApplicationContext(), scores[0].score, Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), scores[0].score, Toast.LENGTH_LONG).show();
         }
         //userDao.insert(score2)
         //userDao.insert(score3)
