@@ -9,7 +9,8 @@ data class Score (
 
         @PrimaryKey(autoGenerate = true) val uid: Int = 0,
         @ColumnInfo(name = "level") val level: String,
-        @ColumnInfo(name = "score") val score: String,
-        @ColumnInfo(name = "date") val date: String,
+        @ColumnInfo(name = "score") val score: Int,
+        @ColumnInfo(name = "time") val time: String,
+        @ColumnInfo(name = "date") val date: String
 
         )

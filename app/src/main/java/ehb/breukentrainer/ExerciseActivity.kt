@@ -15,6 +15,7 @@ class ExerciseActivity : AppCompatActivity() {
     private var mScore = 0
     private var mExerciseNumber = 0
     private var maxNumber = 0
+    private var mLevel: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +33,9 @@ class ExerciseActivity : AppCompatActivity() {
 
         mScoreView.text = "0/0"
 
-        val level = intent.getStringExtra("Level")
-        if (level == "Basic") maxNumber = 5
-        if (level == "Advanced") maxNumber = 10
+        mLevel = intent.getStringExtra("Level")
+        if (mLevel == "Basic") maxNumber = 5
+        if (mLevel == "Advanced") maxNumber = 10
 
         mExerciseLibrary = ExerciseLibrary(maxNumber)
 
@@ -103,8 +104,9 @@ class ExerciseActivity : AppCompatActivity() {
             meter.text
             val mScoreView = findViewById<TextView>(R.id.score);
 
+            intent.putExtra("Level", mLevel)
             intent.putExtra("Time", meter.text)
-            intent.putExtra("Score", mScoreView.text)
+            intent.putExtra("Score", mScore)
             // start your next activity
             startActivity(intent)
 
