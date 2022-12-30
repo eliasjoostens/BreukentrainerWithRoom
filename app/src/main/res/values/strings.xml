@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Division Trainer</string>
     <string name="StartScreen_text">Choose a difficulty to start a game, or have a look at the tip of the day ;)</string>
+    <string name="basic_button">Beginner</string>
+    <string name="advanced_button">Advanced</string>
+    <string name="tip_button">Tip of the day</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="new_game">New game</string>
+    <string name="quit">Quit</string>
+    <string name="Oefening">Here comes the exercise</string>
+
+
+
 </resources>

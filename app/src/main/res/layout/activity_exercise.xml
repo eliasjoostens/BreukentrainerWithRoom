@@ -37,7 +37,7 @@
         android:layout_marginBottom="40dp"
         android:layout_weight="1"
         android:padding="8dp"
-        android:text="Which thing is alive?"
+        android:text="@string/Oefening"
         android:textSize="20sp" />
 
 
@@ -49,7 +49,7 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="bird"
+        android:text="Optie 1"
         android:textColor="#fff" />
 
     <Button
@@ -60,7 +60,7 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="door"
+        android:text="Optie 2"
         android:textColor="#fff" />
 
     <Button
@@ -71,7 +71,7 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="rock"
+        android:text="Optie 3"
         android:textColor="#fff" />
 
     <Button
@@ -82,7 +82,7 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="rock"
+        android:text="Optie 4"
         android:textColor="#fff" />
 
     <Chronometer

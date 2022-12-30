@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="Time"
+            android:text="@string/time"
             android:textSize="20sp" />
 
         <TextView
@@ -64,10 +64,10 @@
 
     <Button
         android:id="@+id/buttonNewGame"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="404dp"
-        android:text="New Game"
+        android:text="@string/new_game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonQuit"
         app:layout_constraintHorizontal_bias="0.5"
@@ -76,9 +76,9 @@
 
     <Button
         android:id="@+id/buttonQuit"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quit"
+        android:text="@string/quit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonNewGame"
@@ -127,7 +127,7 @@
                 android:id="@+id/textView_tijd"
                 android:layout_width="126dp"
                 android:layout_height="match_parent"
-                android:text="Tijd"
+                android:text="@string/time"
                 android:textColor="#3F51B5"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -136,7 +136,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="101dp"
                 android:layout_height="match_parent"
-                android:text="Datum"
+                android:text="@string/date"
                 android:textColor="#3F51B5"
                 android:textSize="16sp"
                 android:textStyle="bold" />

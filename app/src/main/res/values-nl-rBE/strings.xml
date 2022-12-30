@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Breuken Trainer</string>
+    <string name="StartScreen_text">Kies een moeilijkheidsgraad om het spel te starten of kijk naar de tip van de dag!</string>
+    <string name="basic_button">Beginner</string>
+    <string name="advanced_button">Gevorderd</string>
+    <string name="tip_button">Tip van de dag</string>
+    <string name="time">Tijd</string>
+    <string name="date">Datum</string>
+    <string name="new_game">Nieuw spel</string>
+    <string name="quit">Beëindigen</string>
+    <string name="Oefening">Hier komt de oefening</string>
+</resources>
