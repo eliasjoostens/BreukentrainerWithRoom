@@ -38,9 +38,10 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="8dp"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
@@ -65,7 +66,7 @@
         android:id="@+id/buttonNewGame"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="404dp"
         android:text="New Game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonQuit"
@@ -83,20 +84,6 @@
         app:layout_constraintStart_toEndOf="@+id/buttonNewGame"
         app:layout_constraintTop_toTopOf="@+id/buttonNewGame" />
 
-    <Button
-        android:id="@+id/ButtonDB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="25dp"
-        android:text="DB button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonQuit" />
-
     <TableLayout
         android:id="@+id/tableLayout2"
         android:layout_width="0dp"
@@ -106,110 +93,113 @@
         android:layout_marginBottom="376dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3BFF45">
+
+            <TextView
+                android:id="@+id/textView_topscores"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Top 3 scores"
+                android:textSize="26sp" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView_topscores"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Top 3 scores" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
                 android:id="@+id/textview_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Score" />
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:text="Score"
+                android:textColor="#3F51B5"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView_tijd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tijd" />
+                android:layout_width="126dp"
+                android:layout_height="match_parent"
+                android:text="Tijd"
+                android:textColor="#3F51B5"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Datum" />
+                android:layout_width="101dp"
+                android:layout_height="match_parent"
+                android:text="Datum"
+                android:textColor="#3F51B5"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView_topscore1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView_tijd1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView_datum1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView_topscore2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView_tijd2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView_datum2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView_topscore3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView_tijd3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView_datum3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
         </TableRow>
 
     </TableLayout>

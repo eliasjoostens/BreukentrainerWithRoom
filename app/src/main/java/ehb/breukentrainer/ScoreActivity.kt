@@ -20,7 +20,6 @@ class ScoreActivity : AppCompatActivity() {
     private var mLevel: String = ""
     private var mTime: String = ""
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
@@ -51,10 +50,7 @@ class ScoreActivity : AppCompatActivity() {
             exitProcess(0)
         }
 
-        val mButtonDB = findViewById<Button>(R.id.ButtonDB);
-        mButtonDB.setOnClickListener {
 
-        }
 
         //Create database when starting up main_activity
         val db = Room.databaseBuilder(
