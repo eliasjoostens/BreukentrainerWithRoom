@@ -21,41 +21,27 @@ class MainActivity : AppCompatActivity() {
         val btnTip = findViewById<Button>(R.id.buttonTip)
         var tipNr = 0;
 
-
         btnStartBasic.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
-            intent.putExtra("Level","Basic")
+            intent.putExtra("Level", "Basic")
             // start your next activity
             startActivity(intent)
-
             finish()
         }
 
         btnStartAdvanced.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
-            intent.putExtra("Level","Advanced")
-            // start your next activity
+            intent.putExtra("Level", "Advanced")
             startActivity(intent)
-
             finish()
         }
 
         btnTip.setOnClickListener {
             val intent = Intent(this, TipOfTheDayActivity::class.java)
-
             tipNr = (0..2).random()
             intent.putExtra("TipNr", tipNr)
-            // start your next activity
             startActivity(intent)
-
-
-            // start your next activity
-            startActivity(intent)
-
             finish()
         }
-
-
-
     }
 }

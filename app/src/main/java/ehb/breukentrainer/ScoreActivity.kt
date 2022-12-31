@@ -24,7 +24,7 @@ class ScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
 
-        val score = intent.getIntExtra("Score",0)
+        val score = intent.getIntExtra("Score", 0)
         val level = intent.getStringExtra("Level")
         if (level != null) mLevel = level
 
@@ -44,13 +44,10 @@ class ScoreActivity : AppCompatActivity() {
             finish()
         }
 
-
         val mButtonQuit = findViewById<Button>(R.id.buttonQuit);
         mButtonQuit.setOnClickListener {
             exitProcess(0)
         }
-
-
 
         //Create database when starting up main_activity
         val db = Room.databaseBuilder(
@@ -58,9 +55,8 @@ class ScoreActivity : AppCompatActivity() {
             AppDatabase::class.java, "database-name"
         ).allowMainThreadQueries().build()
 
-        //Instantiate userDao + get all users
+        //Instantiate ScoreDao
         val scoreDao = db.scoreDao()
-
         val calender = Calendar.getInstance()
 
         val year = calender.get(Calendar.YEAR)
@@ -73,13 +69,11 @@ class ScoreActivity : AppCompatActivity() {
         lifecycleScope.launch {
 
             scoreDao.insert(score1)
-
-            var scores : List<Score>
+            var scores: List<Score>
 
             if (mLevel == "Basic") {
                 scores = scoreDao.getScoresBasic()
-            }
-            else {
+            } else {
                 scores = scoreDao.getScoresAdvanced()
             }
 
@@ -113,9 +107,6 @@ class ScoreActivity : AppCompatActivity() {
                 val textViewDatum3: TextView = findViewById(R.id.textView_datum3) as TextView
                 textViewDatum3.text = scores[2].date.toString()
             }
-
-            //Toast.makeText(getApplicationContext(), scores[0].score, Toast.LENGTH_LONG).show();
         }
-
     }
 }

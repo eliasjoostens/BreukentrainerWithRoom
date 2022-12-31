@@ -3,11 +3,8 @@ package ehb.breukentrainer
 fun gcd(a: Long, b: Long): Long = if (b == 0L) a else gcd(b, a % b)
 
 infix fun Long.ldiv(denom: Long) = Frac(this, denom)
-
 infix fun Int.idiv(denom: Int) = Frac(this.toLong(), denom.toLong())
-
 fun Long.toFrac() = Frac(this, 1)
-
 fun Int.toFrac() = Frac(this.toLong(), 1)
 
 class Frac : Comparable<Frac> {
@@ -16,7 +13,7 @@ class Frac : Comparable<Frac> {
 
     companion object {
         val ZERO = Frac(0, 1)
-        val ONE  = Frac(1, 1)
+        val ONE = Frac(1, 1)
     }
 
     constructor(n: Long, d: Long) {
@@ -25,8 +22,7 @@ class Frac : Comparable<Frac> {
         var dd = d
         if (nn == 0L) {
             dd = 1
-        }
-        else if (dd < 0) {
+        } else if (dd < 0) {
             nn = -nn
             dd = -dd
         }
@@ -45,13 +41,9 @@ class Frac : Comparable<Frac> {
         Frac(num * other.denom + denom * other.num, other.denom * denom)
 
     operator fun unaryPlus() = this
-
     operator fun unaryMinus() = Frac(-num, denom)
-
     operator fun minus(other: Frac) = this + (-other)
-
     operator fun times(other: Frac) = Frac(this.num * other.num, this.denom * other.denom)
-
     operator fun rem(other: Frac) = this - Frac((this / other).toLong(), 1) * other
 
     operator fun inc() = this + ONE
@@ -69,9 +61,9 @@ class Frac : Comparable<Frac> {
     override fun compareTo(other: Frac): Int {
         val diff = this.toDouble() - other.toDouble()
         return when {
-            diff < 0.0  -> -1
-            diff > 0.0  -> +1
-            else        ->  0
+            diff < 0.0 -> -1
+            diff > 0.0 -> +1
+            else -> 0
         }
     }
 
@@ -81,11 +73,8 @@ class Frac : Comparable<Frac> {
     }
 
     override fun hashCode() = num.hashCode() xor denom.hashCode()
-
     override fun toString() = if (denom == 1L) "$num" else "$num/$denom"
-
     fun toDouble() = num.toDouble() / denom
-
     fun toLong() = num / denom
 }
 

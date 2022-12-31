@@ -129,6 +129,6 @@ class ExerciseActivity : AppCompatActivity() {
 
     fun updateScore(point: Int) {
         var mScoreView = findViewById<TextView>(R.id.score);
-        mScoreView.setText("".plus(mScore).plus( "/").plus( mExerciseNumber))
+        mScoreView.setText("".plus(mScore).plus("/").plus(mExerciseNumber))
     }
 }

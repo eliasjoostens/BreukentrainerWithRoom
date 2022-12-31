@@ -15,13 +15,16 @@ class TipOfTheDayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tip_of_the_day)
 
-        var imageURL=""
+        var imageURL = ""
         val tipNr = intent.getIntExtra("TipNr", 1)
         when (tipNr) {
-            0 -> imageURL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_i3vzTsG2AqONDJBuv9jxiWBj6rIJpT1BkA&usqp=CAU"
-            1 -> imageURL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXSlAOckeZB57nLdBBe1CsAD7vSuAZo6C_6w&usqp=CAU"
+            0 -> imageURL =
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_i3vzTsG2AqONDJBuv9jxiWBj6rIJpT1BkA&usqp=CAU"
+            1 -> imageURL =
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXSlAOckeZB57nLdBBe1CsAD7vSuAZo6C_6w&usqp=CAU"
             else -> {
-                imageURL="https://www.examenoverzicht.nl/pub/media/wysiwyg/Wiskunde/Rekenregel_bij_het_optellen_en_aftrekken_van_breuken_a.PNG"
+                imageURL =
+                    "https://www.examenoverzicht.nl/pub/media/wysiwyg/Wiskunde/Rekenregel_bij_het_optellen_en_aftrekken_van_breuken_a.PNG"
             }
         }
 
@@ -29,7 +32,6 @@ class TipOfTheDayActivity : AppCompatActivity() {
 
         left_arrow.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            // start your next activity
             startActivity(intent)
             finish()
         }
@@ -37,12 +39,10 @@ class TipOfTheDayActivity : AppCompatActivity() {
         // Declaring and initializing the ImageView
         val imageView = findViewById<ImageView>(R.id.imageTipView)
 
-        // Declaring executor to parse the URL
+        // Declaring executor
         val executor = Executors.newSingleThreadExecutor()
 
-        // Once the executor parses the URL
-        // and receives the image, handler will load it
-        // in the ImageView
+        // Executor receives image and loads it into ImageView
         val handler = Handler(Looper.getMainLooper())
 
         // Initializing the image
@@ -50,10 +50,6 @@ class TipOfTheDayActivity : AppCompatActivity() {
 
         // Only for Background process (can take time depending on the Internet speed)
         executor.execute {
-
-            //val imageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_i3vzTsG2AqONDJBuv9jxiWBj6rIJpT1BkA&usqp=CAU"
-            //val imageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXSlAOckeZB57nLdBBe1CsAD7vSuAZo6C_6w&usqp=CAU"
-            //val imageURL = "https://www.examenoverzicht.nl/pub/media/wysiwyg/Wiskunde/Rekenregel_bij_het_optellen_en_aftrekken_van_breuken_a.PNG"
 
             // Tries to get the image and post it in the ImageView
             // with the help of Handler
@@ -67,8 +63,7 @@ class TipOfTheDayActivity : AppCompatActivity() {
                 }
             }
 
-            // If the URL doesnot point to
-            // image or any other kind of failure
+            // Catch false URL or other exceptions
             catch (e: Exception) {
                 e.printStackTrace()
             }
