@@ -13,19 +13,19 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/score_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:text="Score"
-            android:textSize="20sp" />
-
-        <TextView
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="0"
+            android:layout_alignEnd="@id/score_text"
+            android:layout_marginEnd="-104dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/Score"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -49,8 +49,9 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="Optie 1"
-        android:textColor="#fff" />
+        android:text="@string/Choice1"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/choice2"
@@ -60,8 +61,9 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="Optie 2"
-        android:textColor="#fff" />
+        android:text="@string/Choice2"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/choice3"
@@ -71,8 +73,9 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="Optie 3"
-        android:textColor="#fff" />
+        android:text="@string/Choice3"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/choice4"
@@ -82,8 +85,9 @@
         android:layout_weight="1"
         android:background="#0091EA"
         android:padding="8dp"
-        android:text="Optie 4"
-        android:textColor="#fff" />
+        android:text="@string/Choice4"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
 
     <Chronometer
         android:id="@+id/c_meter"

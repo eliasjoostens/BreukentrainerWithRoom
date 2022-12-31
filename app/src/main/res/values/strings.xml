@@ -9,7 +9,11 @@
     <string name="new_game">New game</string>
     <string name="quit">Quit</string>
     <string name="Oefening">Here comes the exercise</string>
-
+    <string name="Choice1">Choice 1</string>
+    <string name="Choice2">Choice 2</string>
+    <string name="Choice3">Choice 3</string>
+    <string name="Choice4">Choice 4</string>
+    <string name="Score">Score</string>
 
 
 </resources>

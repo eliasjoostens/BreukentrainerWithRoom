@@ -10,4 +10,9 @@
     <string name="new_game">Nieuw spel</string>
     <string name="quit">Beëindigen</string>
     <string name="Oefening">Hier komt de oefening</string>
+    <string name="Choice1">Keuze 1</string>
+    <string name="Choice2">Keuze 2</string>
+    <string name="Choice3">Keuze 3</string>
+    <string name="Choice4">Keuze 4</string>
+    <string name="Score">Resultaat</string>
 </resources>
