@@ -9,7 +9,7 @@
     tools:visibility="visible">
 
     <include
-        android:id="@+id/TipToolbar"
+        android:id="@+id/AppBar"
         layout="@layout/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,9 +23,9 @@
         android:id="@+id/imageTipView"
         android:layout_width="411dp"
         android:layout_height="202dp"
-        android:contentDescription="Tip of the Day"
+        android:contentDescription="@string/TipView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TipToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/AppBar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

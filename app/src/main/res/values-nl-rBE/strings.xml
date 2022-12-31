@@ -16,4 +16,7 @@
     <string name="Choice4">Keuze 4</string>
     <string name="Score">Resultaat</string>
     <string name="TopScores">Top 3 resultaten</string>
+    <string name="back_arrow">Pijl terug</string>
+    <string name="TipView">Tip afbeelding</string>
+    <string name="QuitApp">Sluit App</string>
 </resources>

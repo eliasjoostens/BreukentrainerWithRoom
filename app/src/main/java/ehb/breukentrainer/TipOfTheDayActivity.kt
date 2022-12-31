@@ -7,8 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.Menu
+import android.widget.Button
 import android.widget.ImageView
 import java.util.concurrent.Executors
+import kotlin.system.exitProcess
 
 class TipOfTheDayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +31,7 @@ class TipOfTheDayActivity : AppCompatActivity() {
             }
         }
 
+        //Hard code action for clicking left arrow in toolbar
         val left_arrow = findViewById<ImageView>(R.id.left_arrow)
 
         left_arrow.setOnClickListener {
@@ -36,15 +40,17 @@ class TipOfTheDayActivity : AppCompatActivity() {
             finish()
         }
 
+        val exit_icon = findViewById<ImageView>(R.id.exit_button)
+        exit_icon.setOnClickListener {
+            exitProcess(0)
+        }
+
         // Declaring and initializing the ImageView
         val imageView = findViewById<ImageView>(R.id.imageTipView)
-
         // Declaring executor
         val executor = Executors.newSingleThreadExecutor()
-
         // Executor receives image and loads it into ImageView
         val handler = Handler(Looper.getMainLooper())
-
         // Initializing the image
         var image: Bitmap? = null
 

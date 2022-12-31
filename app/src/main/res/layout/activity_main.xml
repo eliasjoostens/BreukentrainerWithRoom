@@ -7,7 +7,7 @@
     android:background="#FFEB3B"
     tools:context=".MainActivity">
 
-    <TextView
+        <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -21,16 +21,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.256" />
 
     <Button
         android:id="@+id/buttonBasic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="348dp"
         android:layout_marginEnd="112dp"
         android:text="@string/basic_button"
         app:layout_constraintEnd_toStartOf="@+id/buttonAdvanced"
