@@ -4,10 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.room.Room
 import kotlinx.coroutines.launch
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         val btnStartAdvanced = findViewById<Button>(R.id.buttonAdvanced)
         val btnTip = findViewById<Button>(R.id.buttonTip)
         var tipNr = 0;
+
+        val exit_icon = findViewById<ImageView>(R.id.exit_button)
+        exit_icon.setOnClickListener {
+            exitProcess(0)
+        }
 
         btnStartBasic.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
