@@ -15,4 +15,5 @@
     <string name="Choice3">Keuze 3</string>
     <string name="Choice4">Keuze 4</string>
     <string name="Score">Resultaat</string>
+    <string name="TopScores">Top 3 resultaten</string>
 </resources>

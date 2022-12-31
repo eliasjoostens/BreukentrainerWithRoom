@@ -14,6 +14,7 @@
     <string name="Choice3">Choice 3</string>
     <string name="Choice4">Choice 4</string>
     <string name="Score">Score</string>
+    <string name="TopScores">Top 3 results</string>
 
 
 </resources>
