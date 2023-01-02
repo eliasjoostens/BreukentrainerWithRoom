@@ -27,6 +27,7 @@ class ExerciseActivity : AppCompatActivity() {
         val mButtonChoice2 = findViewById<Button>(R.id.choice2);
         val mButtonChoice3 = findViewById<Button>(R.id.choice3);
         val mButtonChoice4 = findViewById<Button>(R.id.choice4);
+
         // access the chronometer from XML file
         var meter = findViewById<Chronometer>(R.id.c_meter);
         meter.start()
@@ -43,11 +44,9 @@ class ExerciseActivity : AppCompatActivity() {
 
         //Start of Button Listener for Button1
         mButtonChoice1.setOnClickListener {
-            //My logic for Button goes in here
 
             if (mButtonChoice1.getText() == mAnswer) {
                 mScore = mScore + 1;
-                //This line of code is optiona
                 Toast.makeText(applicationContext, "correct", Toast.LENGTH_SHORT).show();
 
             } else {
@@ -61,7 +60,6 @@ class ExerciseActivity : AppCompatActivity() {
         mButtonChoice2.setOnClickListener {
             if (mButtonChoice2.getText() == mAnswer) {
                 mScore = mScore + 1;
-                //This line of code is optiona
                 Toast.makeText(applicationContext, "correct", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(applicationContext, "wrong", Toast.LENGTH_SHORT).show();
@@ -74,7 +72,6 @@ class ExerciseActivity : AppCompatActivity() {
         mButtonChoice3.setOnClickListener {
             if (mButtonChoice3.getText() == mAnswer) {
                 mScore = mScore + 1;
-                //This line of code is optiona
                 Toast.makeText(applicationContext, "correct", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(applicationContext, "wrong", Toast.LENGTH_SHORT).show();
@@ -87,7 +84,6 @@ class ExerciseActivity : AppCompatActivity() {
         mButtonChoice4.setOnClickListener {
             if (mButtonChoice4.getText() == mAnswer) {
                 mScore = mScore + 1;
-                //This line of code is optional
                 Toast.makeText(applicationContext, "correct", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(applicationContext, "wrong", Toast.LENGTH_SHORT).show();
